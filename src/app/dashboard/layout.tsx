@@ -1,12 +1,22 @@
-import SideNav from "../../components/sidenav";
+"use client"
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-    return (
-      <div className="flex h-screen flex-col md:flex-row md:overflow-hidden bg-gray-100">
-        <div className="w-full flex-none md:w-64">
-          <SideNav />
-        </div>
-        <div className="flex-grow p-6 md:overflow-y-auto md:p-12 bg-white">{children}</div>
-      </div>
-    );
-  }
+import * as React from "react"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
+import { cn } from "../../lib/utils"
+
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+
+ 
+
+  return (
+   <div>
+      {children}
+   </div>
+  )
+} 

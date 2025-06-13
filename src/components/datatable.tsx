@@ -61,7 +61,7 @@ export const columns: ColumnDef<Cards>[] = [
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
               <span className="sr-only">Ouvrir</span>
-              <QrCode className="h-4 w-4" />
+              <QrCode className="h-4 w-4 bg-white" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start">
@@ -126,7 +126,7 @@ export default function DataTable<TData, TValue>({
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                Aucun résultat trouvé
               </TableCell>
             </TableRow>
           )}
