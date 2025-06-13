@@ -1,36 +1,38 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../app/globals.css";
-import { Toaster } from "../components/ui/toaster";
+import React from 'react';
+import { Inter } from 'next/font/google'
+import { Metadata } from "next";
 import Provider from "../components/Provider";
 import { ThemeProvider } from "../components/themes-provider";
-// const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from "../components/ui/toaster";
+import "../app/globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "LegitID",
   description: "Application d'authentification de pièces d'identité",
 };
-//importer provider et appeler dans le body
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Provider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} bg-black`} suppressHydrationWarning>
+        <Provider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
             {children}
             <Toaster />
-          </Provider>
-        </ThemeProvider>
+          </ThemeProvider>
+        </Provider>
       </body>
     </html>
-  );
+  )
 }

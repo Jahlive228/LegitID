@@ -34,7 +34,7 @@ export default  async function Page() {
 
   return (
     <main className="w-full  flex   flex-col items-center justify-center">
-      <h1 className="text-6xl mb-28 font-bold text-center ">STATISTICS</h1>
+      <h1 className="text-6xl mb-12 font-bold text-center text-black">Tableau de bord</h1>
       <div className=" flex w-full justify-around">
         <Card title={"Verifiers"} value={`${countVerifier}`} type={"verifiers"} />
         <Card title={"Issuers"} value={`${countIssuer}`} type={"issuers"} />

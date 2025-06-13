@@ -2,6 +2,7 @@ import Link from 'next/link';
 import NavLinks from './nav-links';
 import Image from 'next/image';
 import { Sidebar } from './ui/sidebar';
+import { LogOut } from 'lucide-react';
 
 export default function SideNav() {
   return (
@@ -12,8 +13,8 @@ export default function SideNav() {
           href="/"
         >
           <div className="w-full flex flex-col gap-2 items-center justify-center text-black md:w-40">
-            <Image src={'/logo.png'} width={80} height={80} alt='logo'/>
-            <h1 className='font-extrabold text-blue-500'>ID CARD APP</h1>
+            <Image src={'/logo.png'} width={80} height={80} alt='logo' className='rounded-lg'/>
+            <h1 className='font-extrabold text-blue-500'>LegitID</h1>
           </div>
         </Link>
         <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
@@ -21,7 +22,8 @@ export default function SideNav() {
           <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
           <form>
             <Link href={"/"} className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-              <div className="hidden md:block">Sign Out</div>
+              <LogOut className='w-4 h-4 text-black' />
+              <div className="hidden md:block text-black">Se déconnecter</div>
             </Link>
           </form>
         </div>

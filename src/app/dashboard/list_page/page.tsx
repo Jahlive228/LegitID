@@ -15,7 +15,7 @@ export default async function ListCard() {
   const data = await getData();
   return (
     <main className=" w-[55rem]  flex justify-center items-center flex-col">
-      <h1 className="text-6xl mb-8 font-bold ">LIST OF ID CARDS </h1>
+      <h1 className="text-6xl text-black mb-8 font-bold ">Liste des cartes d&apos;identité</h1>
       <DataTable columns={columns} data={data} />
     </main>
   );

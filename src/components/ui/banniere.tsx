@@ -59,7 +59,7 @@ export const Banniere = () => {
     //     </motion.div>
     // </header>
 
-<main className="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+<main className="container mx-auto bg-black px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
 {/* Left Column - 3D Visualization */}
 <div className="relative aspect-square max-md:hidden bg-white rounded-lg overflow-hidden">
   {/* <Image

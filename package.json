@@ -20,7 +20,7 @@
 
     
 
-  "build": "next build",
+  "build": "prisma generate && next build",
   
 
     
@@ -72,11 +72,6 @@
     
 
   "@pinata/sdk": "^2.1.0",
-  
-
-    
-
-  "@prisma/client": "^5.10.2",
   
 
     
@@ -317,6 +312,11 @@
 
     
 
+  "@prisma/client": "^6.9.0",
+  
+
+    
+
   "@typechain/ethers-v6": "^0.5.1",
   
 
@@ -382,12 +382,17 @@
 
     
 
+  "pino-pretty": "^13.0.0",
+  
+
+    
+
   "postcss": "^8",
   
 
     
 
-  "prisma": "^5.10.2",
+  "prisma": "^6.9.0",
   
 
     
