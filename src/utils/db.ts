@@ -1,5 +1,3 @@
-
-
 import { PrismaClient } from '@prisma/client'
 
 
@@ -56,5 +54,24 @@ export  { getContracts};
 export async function countContract(){
   const allContractCount=prisma.contract.count()
   return allContractCount;
+}
+
+export async function verifyDocumentByHash(hash: string) {
+  try {
+    console.log("Début de la vérification du document avec le hash:", hash);
+    const document = await prisma.contract.findFirst({
+      where: {
+        OR: [
+          { imageHash: hash },
+          { documentHash: hash }
+        ]
+      }
+    });
+    console.log("Résultat de la vérification:", document);
+    return document;
+  } catch (error) {
+    console.error("Erreur lors de la vérification du document:", error);
+    throw error;
+  }
 }
 

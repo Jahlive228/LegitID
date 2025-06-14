@@ -8,12 +8,13 @@ datasource db {
 }
 
 model Contract {
-  id      Int      @id @default(autoincrement())
-  imageHash    String
-  documentHash String
+  id           Int      @id @default(autoincrement())
+  imageHash    String   @db.VarChar(255)
+  documentHash String   @db.VarChar(255)
 }
+
 model User {
-  id      Int      @id @default(autoincrement())
-  address    String @unique
-  role  String    
+  id        Int      @id @default(autoincrement())
+  address   String   @unique @db.VarChar(255)
+  role      String   @db.VarChar(50)
 }
